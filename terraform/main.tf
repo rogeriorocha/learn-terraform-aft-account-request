@@ -2,11 +2,11 @@ module "sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "homologacao-poc@leguedex.com"
-    AccountName               = "homologacao-poc"
+    AccountEmail              = "homo-poc@leguedex.com"
+    AccountName               = "homo-poc"
     ManagedOrganizationalUnit = "Sandbox"
-    SSOUserEmail              = "homologacao-poc@leguedex.com"
-    SSOUserFirstName          = "Homologacao"
+    SSOUserEmail              = "homo-poc@leguedex.com"
+    SSOUserFirstName          = "Homo"
     SSOUserLastName           = "POC"
   }
 
