@@ -4,7 +4,7 @@ module "sandbox" {
   control_tower_parameters = {
     AccountEmail              = "homologacao-poc@leguedex.com"
     AccountName               = "homologacao-poc"
-    ManagedOrganizationalUnit = "AFT Management"
+    ManagedOrganizationalUnit = "Sandbox"
     SSOUserEmail              = "homologacao-poc@leguedex.com"
     SSOUserFirstName          = "Homologacao"
     SSOUserLastName           = "POC"
