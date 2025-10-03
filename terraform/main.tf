@@ -10,6 +10,7 @@ module "sandbox" {
     SSOUserLastName           = "AFT"
   }
 
+
   account_tags = {
     "Learn Tutorial" = "AFT"
   }
