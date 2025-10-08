@@ -1,6 +1,7 @@
 module "sandbox" {
   source = "./modules/aft-account-request"
 
+
   control_tower_parameters = {
     AccountEmail              = "homo-poc22@leguedex.com"
     AccountName               = "homo-poc22"
@@ -24,4 +25,4 @@ module "sandbox" {
   }
 
   account_customizations_name = "Sandbox"
-}
+
