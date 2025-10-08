@@ -1,9 +1,9 @@
 control_tower_parameters:
-  AccountEmail: "homo-poc226@leguedex.com"
-  AccountName: "homo-poc226"
+  AccountEmail: "homo-poc227@leguedex.com"
+  AccountName: "homo-poc227"
   ManagedOrganizationalUnit: "Sandbox"
-  SSOUserEmail: "homo-poc226@leguedex.com"
-  SSOUserFirstName: "homo-poc226"
+  SSOUserEmail: "homo-poc227@leguedex.com"
+  SSOUserFirstName: "homo-poc227"
   SSOUserLastName: "POC"
 
 account_tags:
