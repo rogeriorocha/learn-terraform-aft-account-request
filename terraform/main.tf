@@ -2,14 +2,13 @@ module "sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "homo-poc2@leguedex.com"
-    AccountName               = "homo-poc2"
+    AccountEmail              = "homo-poc22@leguedex.com"
+    AccountName               = "homo-poc22"
     ManagedOrganizationalUnit = "Sandbox"
-    SSOUserEmail              = "homo-poc2@leguedex.com"
-    SSOUserFirstName          = "Homo2"
+    SSOUserEmail              = "homo-poc22@leguedex.com"
+    SSOUserFirstName          = "Homo-poc22"
     SSOUserLastName           = "POC"
   }
-
 
   account_tags = {
     "Learn Tutorial" = "AFT"
