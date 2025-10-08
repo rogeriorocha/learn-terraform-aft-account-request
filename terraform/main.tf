@@ -1,30 +1,23 @@
-module "sandbox" {
-  source = "./modules/aft-account-request"
+locals {
+  # Lê todos os arquivos .yaml da pasta /terraform/account
+  account_files = fileset("${path.module}/account", "*.yaml")
 
-
-  control_tower_parameters = {
-    AccountEmail              = "homo-poc224@leguedex.com"
-    AccountName               = "homo-poc224"
-    ManagedOrganizationalUnit = "Sandbox"
-    SSOUserEmail              = "homo-poc224@leguedex.com"
-    SSOUserFirstName          = "Homo-poc224"
-    SSOUserLastName           = "POC"
+  # Converte cada YAML em objeto
+  account_configs = {
+    for file in local.account_files :
+    trimsuffix(basename(file), ".yaml") => yamldecode(file("${path.module}/account/${file}"))
   }
+}
 
-  account_tags = {
-    "Learn Tutorial" = "AFT"
-  }
+# Cria dinamicamente um módulo para cada arquivo
+module "aft_accounts" {
+  for_each = local.account_configs
+  source   = "./modules/aft-account-request"
 
-  change_management_parameters = {
-    change_requested_by = "HashiCorp Learn"
-    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
-  }
+  control_tower_parameters     = each.value.control_tower_parameters
+  account_tags                 = each.value.account_tags
+  change_management_parameters = each.value.change_management_parameters
+  custom_fields                = each.value.custom_fields
+  account_customizations_name  = each.value.account_customizations_name
+}
 
-  custom_fields = {
-    group = "non-prod"
-  }
-
-
-  account_customizations_name = "Sandbox"
-
-}  
