@@ -3,11 +3,11 @@ module "sandbox" {
 
 
   control_tower_parameters = {
-    AccountEmail              = "homo-poc223@leguedex.com"
-    AccountName               = "homo-poc223"
+    AccountEmail              = "homo-poc224@leguedex.com"
+    AccountName               = "homo-poc224"
     ManagedOrganizationalUnit = "Sandbox"
-    SSOUserEmail              = "homo-poc223@leguedex.com"
-    SSOUserFirstName          = "Homo-poc223"
+    SSOUserEmail              = "homo-poc224@leguedex.com"
+    SSOUserFirstName          = "Homo-poc224"
     SSOUserLastName           = "POC"
   }
 
