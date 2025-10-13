@@ -1,0 +1,15 @@
+control_tower_parameters:
+  AccountEmail: prod-folhapagamento@leguedex.com
+  AccountName: prod-folhapagamento
+  ManagedOrganizationalUnit: Sandbox
+  SSOUserEmail: prod-folhapagamento@leguedex.com
+  SSOUserFirstName: prod-folhapagamento
+  SSOUserLastName: POC
+account_tags:
+  Learn Tutorial: AFT
+change_management_parameters:
+  change_requested_by: HashiCorp Learn
+  change_reason: Learn AWS Control Tower Account Factory for Terraform
+custom_fields:
+  group: non-prod
+account_customizations_name: Sandbox
